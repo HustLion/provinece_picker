@@ -50,7 +50,7 @@ public class ProvinceProviderPlugin implements MethodCallHandler {
     public ProvinceProviderPlugin(Registrar registrar, MethodChannel channel) {
         this.registrar = registrar;
         this.channel = channel;
-        Toast.makeText(registrar.activeContext(), "Plugin", Toast.LENGTH_LONG).show();
+        // Toast.makeText(registrar.activeContext(), "Plugin", Toast.LENGTH_LONG).show();
     }
     private Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
@@ -180,7 +180,7 @@ public  void  showProvinceProvider(MethodCall call, Result result) {
                         ProvinceProviderPlugin.this.channel.invokeMethod("provinceResult", result, new Result() {
                             @Override
                             public void success(Object o) {
-                                Toast.makeText(ProvinceProviderPlugin.this.registrar.activeContext(), ""+o, Toast.LENGTH_SHORT).show();
+                                // Toast.makeText(ProvinceProviderPlugin.this.registrar.activeContext(), ""+o, Toast.LENGTH_SHORT).show();
                             }
 
                             @Override
